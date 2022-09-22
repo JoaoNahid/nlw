@@ -2,21 +2,21 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const { Screen, Navigator} = createNativeStackNavigator()
 
-import { Home } from '../screens/Home'
-import { Selecao } from '../screens/Selecao'
+import { Team } from '../screens/Team'
+import { Home } from "../screens/Home";
 
 export function StackRoutes(){
   return (
     <Navigator>
         <Screen 
-          name="grupos"
+          name="Home"
           component={Home}
           options={{headerShown: false}}
         />
 
         <Screen 
-          name="selecao"
-          component={Selecao}
+          name="Team"
+          component={Team}
           options={{headerShown: false}}
         />
     </Navigator>

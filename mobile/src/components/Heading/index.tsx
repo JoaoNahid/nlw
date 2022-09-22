@@ -70,6 +70,7 @@ export function Heading({showDescription ,children, title, subtitle, ...rest}: P
           useNativeDriver: false
         }
       )}
+      style={{marginBottom: 100}}
       >
       {
         children

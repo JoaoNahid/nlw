@@ -9,9 +9,9 @@ export const THEME = {
     CAPTION_400: '#A1A1AA',
     CAPTION_300: '#D4D4D8',
 
-    SHAPE: '#2A2634',
+    SHAPE: '#E8D0DB',
 
-    PRIMARY: '#8B5CF6',
+    PRIMARY: '#8d184e',
     SUCCESS: '#34D399',
     ALERT: '#F87171',
 

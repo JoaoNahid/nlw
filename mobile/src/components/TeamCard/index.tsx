@@ -20,7 +20,7 @@ export function TeamCard({data, ...rest }: Props) {
   const navigation = useNavigation()
 
   function toTeamScreen(){
-    navigation.navigate('selecao')
+    navigation.navigate('Team')
   }
 
 

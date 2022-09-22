@@ -5,7 +5,7 @@ import { Sticker } from '../../components/Sticker';
 import { styles } from './styles';
 
 
-export function Selecao() {
+export function Team() {
   return (
     <Background>
       <Heading showDescription={true} title="Brasil" subtitle="Brazil">
