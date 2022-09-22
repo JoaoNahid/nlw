@@ -1,37 +1,47 @@
-import { View, Image, FlatList } from 'react-native';
+import { useState } from 'react';
+import { View, Image, FlatList, ScrollView, Text, Animated } from 'react-native';
 
-import logoImg from '../../assets/logo-nlw-esports.png'
+import logoImg from '../../assets/logoCopa.png'
 import { Heading } from '../../components/Heading';
 import { styles } from './styles';
-import { GameCard } from '../../components/GameCard';
-import { GAMES } from '../../utils/games';
+import { TeamCard } from '../../components/TeamCard';
+import { EQUIPES } from '../../utils/equipes';
+import { Background } from '../../components/Background';
+
 
 export function Home() {
-  return (
-    <View style={styles.container}>
-      <Image 
-        source={logoImg}
-        style={styles.logo}
-      />
-      <Heading
-        title="Encontre seu duo!" 
-        subtitle="Selecione o game que deseja jogar..." 
-      />
 
-      <FlatList
-        data={GAMES}
-        keyExtractor={item => item.id}
-        renderItem={({item}) => (
-          <GameCard 
-              data={item}
-            />
-        )}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.contentList}
-      />
+  const [scrollY, setScrollY] = useState(new Animated.Value(0))
+
+  return (
+    <Background>
+      <Heading showDescription={true} title="Álbum de Figurinhas" subtitle="Grupos">
+        {
+          EQUIPES.map(grupo => {
+            return(
+              <View style={styles.groupBox}>
+                <Text style={styles.groupTitle}>{grupo.grupo}</Text>
+                <FlatList
+                key={grupo.id}
+                data={grupo.equipes}
+                keyExtractor={item => item.id}
+                renderItem={({item}) => (
+                  <TeamCard 
+                      data={item}
+                    />
+                )}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={styles.contentList}
+              />
+              </View>
+            )
+          })
+        }
+      </Heading>
+      
       
 
-    </View>
+    </Background>
   );
 }

@@ -3,8 +3,20 @@ import Game from './components/Game';
 
 import logoImg from './assets/img/Logo.svg'
 import {MagnifyingGlassPlus} from 'phosphor-react'
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [games, setGames] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:3333/games')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        
+      })
+  }, [])
+
   return (
     <div className="max-w-[1344px] mx-auto flex items-center flex-col my-16">
       <img src={logoImg} alt="" />

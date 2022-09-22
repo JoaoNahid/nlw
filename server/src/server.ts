@@ -11,8 +11,9 @@ Tipos de Parametros
 
 import express from "express"
 import { PrismaClient } from "@prisma/client"
-import { convertHourToMinutes } from "./utils/convertHourToMinutes"
-
+import ConvertHourToMinutes from "./utils/convertHourToMinutes"
+import ConvertMinutesToHour from "./utils/convertMinutesToHour"
+var cors = require('cors')
 const app = express()
 
 // express não reconhece requests em json por padrão
@@ -41,15 +42,15 @@ app.post('/games/:id/ads', async (req, res) => {
 
   const body: any = req.body
 
-  const ad = await prisma.ad.create({
+  const ad: any = await prisma.ad.create({
     data: {
       gameId,
       name: body.name,
       yearsPlaying: body.yearsPlaying,
       discord: body.discord,
       weekDays: body.weekDays.join(','),
-      hourStart: convertHourToMinutes(body.hourStart),
-      hourEnd: convertHourToMinutes(body.hourEnd),
+      hourStart: ConvertHourToMinutes(body.hourStart),
+      hourEnd: ConvertHourToMinutes(body.hourEnd),
       useVoiceChannel: body.useVoiceChannel
     }
   })
@@ -77,7 +78,9 @@ app.get('/games/:id/ads', async (req, res) => {
   return res.json(ads.map(ad => {
     return {
       ...ad,
-      weekDays: ad.weekDays.split(',')
+      weekDays: ad.weekDays.split(','),
+      hourStart: ConvertMinutesToHour(ad.hourStart),
+      hourEnd: ConvertMinutesToHour(ad.hourEnd)
     }
   }))
 })

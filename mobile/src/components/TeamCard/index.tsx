@@ -3,21 +3,33 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { styles } from './styles';
 import { THEME } from '../../theme';
+import { useNavigation } from '@react-navigation/native';
 
-export interface GameCardProps {
+export interface TeamCardProps {
   id: string,
-  name: string,
-  ads: string,
+  selecao: string,
+  stickers: string,
   cover: ImageSourcePropType
 }
 
 interface Props extends TouchableOpacityProps{
-  data: GameCardProps
+  data: TeamCardProps,
 }
 
-export function GameCard({ data, ...rest }: Props) {
+export function TeamCard({data, ...rest }: Props) {
+  const navigation = useNavigation()
+
+  function toTeamScreen(){
+    navigation.navigate('selecao')
+  }
+
+
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity 
+      style={styles.container}
+      activeOpacity={0.7}
+      onPress={toTeamScreen}
+    >
       <ImageBackground 
         style={styles.cover}
         source={data.cover}
@@ -27,11 +39,11 @@ export function GameCard({ data, ...rest }: Props) {
           style={styles.footer}
         >
           <Text style={styles.name}>
-            {data.name}
+            {data.selecao}
           </Text>
 
           <Text style={styles.ads}>
-            {data.ads} anúncios
+            {data.stickers} figurinha(s)
           </Text>
 
         </LinearGradient>
