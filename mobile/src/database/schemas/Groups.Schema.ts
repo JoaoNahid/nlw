@@ -3,5 +3,6 @@ export const GroupsSchema = {
   properties: {
     _id: "string",
     name: "string"
-  }
+  },
+  
 }

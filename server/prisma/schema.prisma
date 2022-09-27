@@ -10,6 +10,32 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Group {
+  id    String @id @default(uuid())
+  title String
+  Team  Team[]
+}
+
+model Team {
+  id         String @id @default(uuid())
+  name       String
+  background String
+  stickers   String
+  prefix     String
+  groupId    String
+
+  group    Group      @relation(fields: [groupId], references: [id])
+  Stickers Stickers[]
+}
+
+model Stickers {
+  id     String @id @default(uuid())
+  codigo Int
+  teamId String
+
+  team Team @relation(fields: [teamId], references: [id])
+}
+
 model Game {
   id        String @id @default(uuid())
   title     String

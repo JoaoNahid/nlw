@@ -24,6 +24,19 @@ const prisma = new PrismaClient({
   log: ['query']
 })
 
+/* app.get('/groups', async (req, res) => {
+  const groups = await prisma.group.findMany({
+    include: { // conta quantos ads tem em cada game
+      _count: {
+        select: {
+          ads: true
+        }
+      }
+    }
+  })
+  return res.json(games)
+}) */
+
 app.get('/games', async (req, res) => {
   const games = await prisma.game.findMany({
     include: { // conta quantos ads tem em cada game

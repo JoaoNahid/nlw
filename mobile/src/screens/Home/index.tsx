@@ -27,8 +27,8 @@ export function Home() {
                 keyExtractor={item => item.id}
                 renderItem={({item}) => (
                   <TeamCard 
-                      data={item}
-                    />
+                    data={item}
+                  />
                 )}
                 horizontal
                 showsHorizontalScrollIndicator={false}
