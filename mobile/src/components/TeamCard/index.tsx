@@ -16,11 +16,18 @@ interface Props extends TouchableOpacityProps{
   data: TeamCardProps,
 }
 
+
 export function TeamCard({data, ...rest }: Props) {
-  const navigation = useNavigation()
+  
+  const navigation = useNavigation();
 
   function toTeamScreen(){
-    navigation.navigate('Team')
+    console.log(data);
+    navigation.navigate('Team',{
+      id: data.id,
+      title: data.selecao
+    })
+    
   }
 
 

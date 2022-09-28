@@ -16,7 +16,7 @@ export function Heading({showDescription ,children, title, subtitle, ...rest}: P
 
   return (
     <>
-    <Animated.Image 
+      <Animated.Image 
         source={logoImg}
         resizeMode="contain"
         style={[
@@ -70,11 +70,12 @@ export function Heading({showDescription ,children, title, subtitle, ...rest}: P
           useNativeDriver: false
         }
       )}
-      style={{marginBottom: 100}}
+      style={{paddingBottom: 160}}
       >
       {
         children
       }
-      </ScrollView></>
+      </ScrollView>
+    </>
   );
 }

@@ -7,6 +7,7 @@ import { styles } from './styles';
 import { TeamCard } from '../../components/TeamCard';
 import { EQUIPES } from '../../utils/equipes';
 import { Background } from '../../components/Background';
+import backgroundImg from '../../assets/bgWorldCup.png'
 
 
 export function Home() {
@@ -14,7 +15,7 @@ export function Home() {
   const [scrollY, setScrollY] = useState(new Animated.Value(0))
 
   return (
-    <Background>
+    <Background image={backgroundImg}>
       <Heading showDescription={true} title="Álbum de Figurinhas" subtitle="Grupos">
         {
           EQUIPES.map(grupo => {

@@ -2,11 +2,16 @@ export declare global {
   namespace ReactNavigation {
     interface RootParamList {
       Groups: undefined,
-      Team: undefined,
+      Team: TeamParams,
       Coca: undefined,
       Museum: undefined,
       Stadiums: undefined,
       Qatar: undefined
     }
   }
+}
+
+export interface TeamParams {
+  id: string;
+  title: string;
 }

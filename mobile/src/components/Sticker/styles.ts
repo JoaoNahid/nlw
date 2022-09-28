@@ -9,7 +9,8 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
     overflow: 'hidden',
     backgroundColor: '#00000088',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginBottom: 16
   },
   stickerCode: {
     color: THEME.COLORS.CAPTION_300,

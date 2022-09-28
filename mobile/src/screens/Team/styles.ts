@@ -8,9 +8,11 @@ export const styles = StyleSheet.create({
   },
   flexBetween: {
     justifyContent: 'space-between',
-    flexDirection: 'row',    
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 20
   },
   stickerLine: {
-    marginVertical: 12
+    marginVertical: 12,
   }
 });

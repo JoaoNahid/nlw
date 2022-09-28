@@ -5,6 +5,10 @@ const { Screen, Navigator} = createNativeStackNavigator()
 import { Team } from '../screens/Team'
 import { Home } from "../screens/Home";
 
+export type RootStackParamList = {
+  Team: undefined;
+}; 
+
 export function StackRoutes(){
   return (
     <Navigator>
