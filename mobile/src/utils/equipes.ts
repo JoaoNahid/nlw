@@ -6,7 +6,7 @@ export const EQUIPES = [
       {
         id: '1',
         selecao: 'Catar',
-        cover: require('../assets/games/game-1.png'),
+        cover: require('../assets/games/game-1.png'), 
         stickers: "3"
       },
       {
