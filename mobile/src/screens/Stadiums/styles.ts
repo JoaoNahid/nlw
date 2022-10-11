@@ -4,7 +4,9 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    paddingHorizontal: 32
+    paddingHorizontal: 32,
+    marginBottom: 60,
+    marginTop: 50
   },
   flexBetween: {
     justifyContent: 'space-between',

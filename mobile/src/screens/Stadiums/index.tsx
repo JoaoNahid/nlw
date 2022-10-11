@@ -1,28 +1,66 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Background } from '../../components/Background';
 import backgroundImg from '../../assets/bgWorldCup.png'
 
 import { styles } from './styles';
-import { View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { Sticker } from '../../components/Sticker';
+import { getRealm } from '../../database/realm';
 
 export function Stadiums() {
+  const [stickers, setStickers] = useState<boolean[]>()
+  const [obtainedStickers, setObtainedStickers] = useState<string[]>([])
+
+  useEffect(() => {    
+    fetchStickers();    
+  }, [])
+
+  async function fetchStickers(){
+    const realm = await getRealm();
+
+    try {
+      const response = realm.objects("Stickers")
+        .filtered(`prefix = 'FWC' && type = 'stadium'`)
+        .toJSON()
+
+      for (let i = 0; i < response.length; i++) {
+        obtainedStickers.push(response[i]['number']);        
+      }     
+
+    } catch (error){
+      console.log(error);
+      
+    } finally{
+      realm.close()
+    }
+    bodyBuilder()
+  }
+
+  function bodyBuilder(){    
+    let lap = []
+    for (let i = 8; i < 19; i++) {
+      if (obtainedStickers.includes(i.toString())) {
+        lap.push(true)
+      } else{
+        lap.push(false)
+      }
+    }
+    setStickers(lap)
+  }  
+
   return (
     <Background image={backgroundImg}>
+      <ScrollView>
       <View style={styles.container}>
           <View style={[styles.flexBetween, styles.stickerLine]}>
-            <Sticker code="FWC 1" obtained={true} />
-            <Sticker code="FWC 2" obtained={true} />
-            <Sticker code="FWC 3" obtained={false} />
-            <Sticker code="FWC 4" obtained={false} />
-            <Sticker code="FWC 5" obtained={true} />
-            <Sticker code="FWC 6" obtained={false} />
-            <Sticker code="FWC 7" obtained={false} />
-            <Sticker code="FWC 8" obtained={false} />
-            <Sticker code="FWC 9" obtained={false} />
-            <Sticker code="FWC 10" obtained={false} />
+          {
+              stickers?.length != 0 ? 
+                stickers?.map((item, index: number) => (<Sticker key={index} code={'FWC '+(index+8)} obtained={item} type="stadium" />))
+              : null
+            }
           </View>
         </View>
+      </ScrollView>
     </Background>
   );
 }

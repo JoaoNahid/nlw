@@ -8,6 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 export interface TeamCardProps {
   id: string,
   selecao: string,
+  prefix: string,
   stickers: string,
   cover: ImageSourcePropType
 }
@@ -22,10 +23,10 @@ export function TeamCard({data, ...rest }: Props) {
   const navigation = useNavigation();
 
   function toTeamScreen(){
-    console.log(data);
     navigation.navigate('Team',{
       id: data.id,
-      title: data.selecao
+      prefix: data.prefix,
+      country: data.selecao
     })
     
   }

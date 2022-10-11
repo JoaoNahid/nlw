@@ -13,5 +13,6 @@ export declare global {
 
 export interface TeamParams {
   id: string;
-  title: string;
+  prefix: string;
+  country: string
 }

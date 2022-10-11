@@ -6,26 +6,30 @@ export const EQUIPES = [
       {
         id: '1',
         selecao: 'Catar',
-        cover: require('../assets/games/game-1.png'), 
-        stickers: "3"
+        cover: require('../assets/teams/qatar.jpg'), 
+        stickers: "3",
+        prefix: 'QAT'
       },
       {
         id: '2',
         selecao: 'Equador',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/ecuador.jpg'),
+        stickers: "3",
+        prefix: 'ECU'
       },
       {
         id: '3',
         selecao: 'Senegal',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/senegal.jpg'),
+        stickers: "3",
+        prefix: 'SEN'
       },
       {
         id: '4',
         selecao: 'Holanda',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/holanda.jpg'),
+        stickers: "3",
+        prefix: 'NED'
       },
     ]    
   },
@@ -36,26 +40,30 @@ export const EQUIPES = [
       {
         id: '1',
         selecao: 'Inglaterra',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/inglaterra.jpg'),
+        stickers: "3",
+        prefix: 'ENG'
       },
       {
         id: '2',
         selecao: 'Irã',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/Ira.jpg'),
+        stickers: "3",
+        prefix: 'IRN'
       },
       {
         id: '3',
         selecao: 'Estados Unidos',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/eua.jpg'),
+        stickers: "3",
+        prefix: 'USA'
       },
       {
         id: '4',
         selecao: 'País de Gales',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/wal.jpg'),
+        stickers: "3",
+        prefix: 'WAL'
       },
     ]    
   },
@@ -66,26 +74,30 @@ export const EQUIPES = [
       {
         id: '1',
         selecao: 'Argentina',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/argentina.jpg'),
+        stickers: "3",
+        prefix: 'ARG'
       },
       {
         id: '2',
         selecao: 'Arábia Saudita',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/ksa.jpg'),
+        stickers: "3",
+        prefix: 'KSA'
       },
       {
         id: '3',
         selecao: 'México',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/mexico.jpg'),
+        stickers: "3",
+        prefix: 'MEX'
       },
       {
         id: '4',
         selecao: 'Polônia',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/polonia.jpg'),
+        stickers: "3",
+        prefix: 'POL'
       },
     ]    
   },
@@ -96,26 +108,30 @@ export const EQUIPES = [
       {
         id: '1',
         selecao: 'França',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/france.jpg'),
+        stickers: "3",
+        prefix: 'FRA'
       },
       {
         id: '2',
         selecao: 'Austrália',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/australia.jpg'),
+        stickers: "3",
+        prefix: 'AUS'
       },
       {
         id: '3',
         selecao: 'Dinamarca',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/den.jpg'),
+        stickers: "3",
+        prefix: 'DEN'
       },
       {
         id: '4',
         selecao: 'Tunísia',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/tunisia.jpg'),
+        stickers: "3",
+        prefix: 'TUN'
       },
     ]    
   },
@@ -126,26 +142,30 @@ export const EQUIPES = [
       {
         id: '1',
         selecao: 'Espanha',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/esp.jpg'),
+        stickers: "3",
+        prefix: 'ESP'
       },
       {
         id: '2',
         selecao: 'Costa Rica',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/crc.jpg'),
+        stickers: "3",
+        prefix: 'CRC'
       },
       {
         id: '3',
         selecao: 'Alemanha',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/ger.jpg'),
+        stickers: "3",
+        prefix: 'GER'
       },
       {
         id: '4',
         selecao: 'Japão',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/jpn.jpg'),
+        stickers: "3",
+        prefix: 'JPN'
       },
     ]    
   },
@@ -156,26 +176,30 @@ export const EQUIPES = [
       {
         id: '1',
         selecao: 'Belgica',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/bel.jpg'),
+        stickers: "3",
+        prefix: 'BEL'
       },
       {
         id: '2',
         selecao: 'Canadá',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/can.jpg'),
+        stickers: "3",
+        prefix: 'CAN'
       },
       {
         id: '3',
         selecao: 'Marrocos',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/mar.jpg'),
+        stickers: "3",
+        prefix: 'MAR'
       },
       {
         id: '4',
         selecao: 'Croácia',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/cro.jpg'),
+        stickers: "3",
+        prefix: 'CRO'
       },
     ]    
   },
@@ -186,26 +210,30 @@ export const EQUIPES = [
       {
         id: '1',
         selecao: 'Brasil',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/bra.jpg'),
+        stickers: "3",
+        prefix: 'BRA'
       },
       {
         id: '2',
         selecao: 'Sérvia',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/srb.jpg'),
+        stickers: "3",
+        prefix: 'SRB'
       },
       {
         id: '3',
         selecao: 'Suiça',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/sui.jpg'),
+        stickers: "3",
+        prefix: 'SUI'
       },
       {
         id: '4',
         selecao: 'Camarões',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/cmr.jpg'),
+        stickers: "3",
+        prefix: 'CMR'
       },
     ]    
   },
@@ -216,26 +244,30 @@ export const EQUIPES = [
       {
         id: '1',
         selecao: 'Portugal',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/por.jpg'),
+        stickers: "3",
+        prefix: 'POR'
       },
       {
         id: '2',
         selecao: 'Gana',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/gha.jpg'),
+        stickers: "3",
+        prefix: 'GHA'
       },
       {
         id: '3',
         selecao: 'Uruguai',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/uru.jpg'),
+        stickers: "3",
+        prefix: 'URU'
       },
       {
         id: '4',
         selecao: 'Coréia do Sul',
-        cover: require('../assets/games/game-1.png'),
-        stickers: "3"
+        cover: require('../assets/teams/kor.jpg'),
+        stickers: "3",
+        prefix: 'KOR'
       },
     ]    
   },

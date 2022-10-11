@@ -17,6 +17,9 @@ export function Home() {
   return (
     <Background image={backgroundImg}>
       <Heading showDescription={true} title="Álbum de Figurinhas" subtitle="Grupos">
+        <View
+          style={styles.container}
+        >
         {
           EQUIPES.map(grupo => {
             return(
@@ -39,6 +42,7 @@ export function Home() {
             )
           })
         }
+        </View>
       </Heading>
       
       
