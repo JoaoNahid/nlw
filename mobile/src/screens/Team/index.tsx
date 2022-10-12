@@ -14,6 +14,7 @@ import { getRealm } from '../../database/realm';
 export function Team() {
   const [stickers, setStickers] = useState<boolean[]>()
   const [obtainedStickers, setObtainedStickers] = useState<string[]>([])
+  const [countStickers, setCountStickers] = useState<number>(0)
 
   const route = useRoute()
   const team = route.params as TeamParams
@@ -45,19 +46,22 @@ export function Team() {
 
   function bodyBuilder(){    
     let lap = []
+    let quantity = 0
     for (let i = 1; i < 21; i++) {
       if (obtainedStickers.includes(i.toString())) {
         lap.push(true)
+        quantity++
       } else{
         lap.push(false)
       }
     }
     setStickers(lap)
+    setCountStickers(quantity)
   }  
 
   return (
     <Background image={backgroundImg}>
-      <Heading showDescription={true} title={team.country} subtitle="Brazil">
+      <Heading showDescription={true} title={team.country} subtitle={`${countStickers} figurinha(s)`}>
         <View style={styles.container}>
           <View style={[styles.flexBetween, styles.stickerLine]}>
             {

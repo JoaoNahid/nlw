@@ -36,13 +36,12 @@ export function Sticker({code, obtained, type}: Props) {
             type: type,
             pasted_at: new Date()
           })
-          console.log('Item criado ==> ', created);
+          // console.log('Item criado ==> ', created);
           
         })
         setStickerObtained(true)
 
       } catch {
-        Alert.alert("Error:", "falha na base de dados da aplicação")
         setStickerObtained(false)
       } finally {
         realm.close()
@@ -62,7 +61,7 @@ export function Sticker({code, obtained, type}: Props) {
           realm.objects("Stickers")
           .filtered(`prefix = '${prefix}' && number = '${stickerNumber}'`)
         )  
-        console.log('Item deletado ==> ', deleted);      
+        // console.log('Item deletado ==> ', deleted);      
       })
       
     } catch (error) {

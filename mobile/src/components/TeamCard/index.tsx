@@ -3,7 +3,9 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { styles } from './styles';
 import { THEME } from '../../theme';
-import { useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import { useCallback, useEffect, useState } from 'react';
+import { getRealm } from '../../database/realm';
 
 export interface TeamCardProps {
   id: string,
@@ -19,6 +21,23 @@ interface Props extends TouchableOpacityProps{
 
 
 export function TeamCard({data, ...rest }: Props) {
+  const [stickersAmount, setStickersAmount] = useState<any>(0)
+
+  useEffect(() => {
+    fetchStickersAmount();
+  }, [])
+
+  async function fetchStickersAmount(){
+    const realm = await getRealm()
+    try {
+      const stickers = realm.objects("Stickers").filtered(`prefix = '${data.prefix}'`)
+      setStickersAmount(stickers.length)      
+    } catch (error) {
+      // console.log(error)
+    } finally{
+      // realm.close()      
+    }
+  }
   
   const navigation = useNavigation();
 
@@ -51,7 +70,7 @@ export function TeamCard({data, ...rest }: Props) {
           </Text>
 
           <Text style={styles.ads}>
-            {data.stickers} figurinha(s)
+            {stickersAmount} figurinha(s)
           </Text>
 
         </LinearGradient>

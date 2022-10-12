@@ -12,8 +12,9 @@ export const styles = StyleSheet.create({
   },
   logo: {
     width: '100%',
+    // alignItems: 'flex-start',
     marginTop: 74,
-    textAlign: 'left'
+    marginLeft: -150
   },
   groupTitle :{
     paddingHorizontal: 32,
@@ -22,7 +23,7 @@ export const styles = StyleSheet.create({
     color: THEME.COLORS.TEXT
   },
   groupBox: {
-    marginBottom: 40
+    // marginBottom: 40
   },
   title: {
     color: THEME.COLORS.TEXT,
